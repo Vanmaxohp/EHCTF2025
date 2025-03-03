@@ -109,7 +109,6 @@ b2 = 19
 q = GCD(pow(a2,(-e2 * e1),N) * pow(c2, e1, N) - pow(a1, (-e1 * e2), N) * pow(c1, e2, N), N)
 p = N // q
 
-from Crypto.Util.number import inverse
 
 def rsa_decrypt(p, q, e, c):
     n = p * q
