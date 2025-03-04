@@ -8,7 +8,7 @@ from hashlib import md5
 from Crypto.Cipher import AES
 from Crypto.Util.number import long_to_bytes, getPrime
 
-FLAG = os.getenvb(b"FLAG", b"FAKE{THIS_IS_NOT_THE_FLAG!!!!!!}")
+FLAG = b"EHCTF{REDACTED}"
 
 
 def encrypt(m: bytes, key: int) -> bytes:
@@ -34,6 +34,11 @@ s = random.randint(1, p - 1)
 
 A = f(s, p)
 ciphertext = encrypt(FLAG, s).hex()
+
+
+print(f"{p = }")
+print(f"{A = }")
+print(f"{ciphertext = }")
 ```
 
 # Phân tích
